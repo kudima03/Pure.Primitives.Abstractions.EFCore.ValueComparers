@@ -8,4 +8,12 @@
     <EnablePackageValidation>true</EnablePackageValidation>
     <!--<PackageValidationBaselineVersion>0.1.0-preview.0.1.0</PackageValidationBaselineVersion>-->
   </PropertyGroup>
+  <PropertyGroup>
+    <PackageId>Pure.Primitives.Abstractions.EFCore.ValueComparers</PackageId>
+    <RootNamespace>Pure.Primitives.Abstractions.EFCore.ValueComparers</RootNamespace>
+    <AssemblyName>Pure.Primitives.Abstractions.EFCore.ValueComparers</AssemblyName>
+    <Authors>Dmitry Kurochkin</Authors>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/kudima03/Pure.Primitives.Abstractions.EFCore.ValueComparers</PackageProjectUrl>
+  </PropertyGroup>
 </Project>
