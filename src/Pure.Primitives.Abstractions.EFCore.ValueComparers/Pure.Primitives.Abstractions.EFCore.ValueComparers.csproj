@@ -16,4 +16,7 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/kudima03/Pure.Primitives.Abstractions.EFCore.ValueComparers</PackageProjectUrl>
   </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Pure.Primitives.Abstractions" Version="4.3.0" />
+  </ItemGroup>
 </Project>
