@@ -16,6 +16,8 @@ public sealed class TimeValueComparer : ValueComparer<ITime>
                     && a.Minute.NumberValue == b.Minute.NumberValue
                     && a.Second.NumberValue == b.Second.NumberValue
                     && a.Millisecond.NumberValue == b.Millisecond.NumberValue
+                    && a.Microsecond.NumberValue == b.Microsecond.NumberValue
+                    && a.Nanosecond.NumberValue == b.Nanosecond.NumberValue
                 ),
             v =>
                 v == null
@@ -24,7 +26,9 @@ public sealed class TimeValueComparer : ValueComparer<ITime>
                         v.Hour.NumberValue,
                         v.Minute.NumberValue,
                         v.Second.NumberValue,
-                        v.Millisecond.NumberValue
+                        v.Millisecond.NumberValue,
+                        v.Microsecond.NumberValue,
+                        v.Nanosecond.NumberValue
                     )
         )
     { }
