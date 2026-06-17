@@ -19,19 +19,25 @@ public sealed class DateTimeValueComparer : ValueComparer<IDateTime>
                     && a.Minute.NumberValue == b.Minute.NumberValue
                     && a.Second.NumberValue == b.Second.NumberValue
                     && a.Millisecond.NumberValue == b.Millisecond.NumberValue
+                    && a.Microsecond.NumberValue == b.Microsecond.NumberValue
+                    && a.Nanosecond.NumberValue == b.Nanosecond.NumberValue
                 ),
-            v =>
-                v == null
-                    ? 0
-                    : HashCode.Combine(
-                        v.Year.NumberValue,
-                        v.Month.NumberValue,
-                        v.Day.NumberValue,
-                        v.Hour.NumberValue,
-                        v.Minute.NumberValue,
-                        v.Second.NumberValue,
-                        v.Millisecond.NumberValue
-                    )
+            v => v == null ? 0 : ComputeHash(v)
         )
     { }
+
+    private static int ComputeHash(IDateTime v)
+    {
+        HashCode hash = new();
+        hash.Add(v.Year.NumberValue);
+        hash.Add(v.Month.NumberValue);
+        hash.Add(v.Day.NumberValue);
+        hash.Add(v.Hour.NumberValue);
+        hash.Add(v.Minute.NumberValue);
+        hash.Add(v.Second.NumberValue);
+        hash.Add(v.Millisecond.NumberValue);
+        hash.Add(v.Microsecond.NumberValue);
+        hash.Add(v.Nanosecond.NumberValue);
+        return hash.ToHashCode();
+    }
 }
