@@ -14,6 +14,7 @@
     <AssemblyName>Pure.Primitives.Abstractions.EFCore.ValueComparers</AssemblyName>
     <Authors>Dmitry Kurochkin</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageProjectUrl>https://github.com/kudima03/Pure.Primitives.Abstractions.EFCore.ValueComparers</PackageProjectUrl>
   </PropertyGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'net7.0'">
@@ -38,5 +39,8 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Pure.Primitives.Abstractions" Version="4.3.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="../../README.md" Pack="true" PackagePath="/" />
   </ItemGroup>
 </Project>
