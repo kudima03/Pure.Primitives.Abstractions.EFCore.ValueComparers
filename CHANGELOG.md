@@ -6,6 +6,14 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ---
 
+## [0.1.0-preview.0.2.0] — 2026-11-11
+
+### Added
+- Added `net11.0` target framework support.
+
+### Changed
+- Updated `Pure.Primitives.Abstractions` to the .NET 11 release.
+
 ## [0.1.0-preview.0.1.1] — 2026-06-17
 
 ### Fixed
